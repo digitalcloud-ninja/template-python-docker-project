@@ -21,7 +21,7 @@ help()
 ############################################################
 # Main Program                                             #
 ############################################################
-declare image="repository-url/project-name:tag"
+declare image="docker/python-project:latest"
 # shellcheck disable=SC2034
 declare container="my-application"
 # shellcheck disable=SC2034

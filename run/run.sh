@@ -21,7 +21,7 @@ help()
 ############################################################
 # Main Program                                             #
 ############################################################
-declare image="repository-url/project-name:tag"
+declare image="docker/python-project:latest"
 # shellcheck disable=SC2034
 declare container="my-application"
 # shellcheck disable=SC2034
@@ -30,5 +30,5 @@ declare port
 if [[ "${1}" = "-h" ]]; then
   help
 else
-  docker run -it -v "${container}"-data:/application --name "${container}" "${image}"
+  docker run -it -d -v "${container}"-data:/application --name "${container}" "${image}"
 fi
